@@ -1,0 +1,27 @@
+<section id="galeria">
+  <div class="header">
+    <p class="eyebrow">Mi trabajo</p>
+    <h2>Galería</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="filtros">
+    <button *ngFor="let f of filtros"
+      [class.activo]="filtroActivo === f"
+      (click)="filtroActivo = f">
+      {{ f }}
+    </button>
+  </div>
+  <div class="grid">
+    <div class="item" *ngFor="let t of trabajosFiltrados" [class]="t.color">
+      <div class="item-inner">
+        <div class="placeholder">
+          <span>{{ t.titulo.charAt(0) }}</span>
+        </div>
+        <div class="overlay">
+          <p class="item-subtitulo">{{ t.subtitulo }}</p>
+          <h3>{{ t.titulo }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

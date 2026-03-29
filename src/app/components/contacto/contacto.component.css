@@ -1,0 +1,66 @@
+section {
+  padding: 8rem 5rem;
+  background: linear-gradient(135deg, #1a1a1a 0%, #1e1510 100%);
+}
+.inner {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 6rem; max-width: 1200px; margin: 0 auto;
+  align-items: start;
+}
+.eyebrow {
+  font-size: 0.68rem; font-weight: 500;
+  letter-spacing: 0.45em; text-transform: uppercase;
+  color: var(--salmon); margin-bottom: 1rem;
+}
+h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 300; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--blanco);
+  margin-bottom: 1.5rem;
+}
+.divider { width: 50px; height: 1px; background: var(--marron); margin-bottom: 2rem; }
+.texto { font-size: 0.9rem; line-height: 1.9; color: var(--gris); margin-bottom: 3rem; }
+.datos { display: flex; flex-direction: column; gap: 1.5rem; }
+.dato { display: flex; flex-direction: column; gap: 0.2rem; }
+.label {
+  font-size: 0.6rem; letter-spacing: 0.35em;
+  text-transform: uppercase; color: var(--marron); font-weight: 600;
+}
+.dato span:last-child { font-size: 0.88rem; color: var(--blanco); }
+.campo { margin-bottom: 1.5rem; }
+label {
+  display: block; font-size: 0.65rem;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--gris); margin-bottom: 0.6rem; font-weight: 500;
+}
+input, select, textarea {
+  width: 100%; background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--blanco); font-family: var(--font-body);
+  font-size: 0.88rem; padding: 1rem 1.2rem;
+  outline: none; transition: border-color 0.3s;
+  appearance: none;
+}
+input:focus, select:focus, textarea { border-color: var(--marron); }
+textarea { resize: vertical; }
+select option { background: var(--oscuro); }
+button {
+  width: 100%; font-family: var(--font-body);
+  font-size: 0.7rem; font-weight: 600;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  background: var(--marron); color: var(--blanco);
+  border: none; padding: 1.2rem;
+  cursor: pointer; transition: background 0.3s;
+  margin-top: 0.5rem;
+}
+button:hover { background: var(--salmon); }
+.gracias {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  min-height: 300px; gap: 1rem; text-align: center;
+}
+.gracias span { font-size: 2.5rem; color: var(--marron); }
+.gracias p { font-family: var(--font-display); font-size: 1.8rem; color: var(--blanco); font-weight: 300; }
+.gracias small { color: var(--gris); letter-spacing: 0.1em; }
+@media (max-width: 768px) { .inner { grid-template-columns: 1fr; gap: 3rem; } }

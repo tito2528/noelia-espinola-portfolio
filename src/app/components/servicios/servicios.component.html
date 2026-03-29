@@ -1,0 +1,20 @@
+﻿<section id="servicios">
+  <div class="header">
+    <p class="eyebrow">Lo que ofrezco</p>
+    <h2>Servicios</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="cards">
+    <div class="card" *ngFor="let s of servicios" [class]="s.color">
+      <div class="card-top">
+        <span class="icono">{{ s.icono }}</span>
+        <span class="categoria">{{ s.categoria }}</span>
+      </div>
+      <h3>{{ s.titulo }}</h3>
+      <p class="desc">{{ s.descripcion }}</p>
+      <ul>
+        <li *ngFor="let item of s.items">{{ item }}</li>
+      </ul>
+    </div>
+  </div>
+</section>

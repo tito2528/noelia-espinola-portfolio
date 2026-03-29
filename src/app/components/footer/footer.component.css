@@ -1,0 +1,31 @@
+footer {
+  background: #111;
+  border-top: 1px solid rgba(107,87,68,0.2);
+  padding: 3rem 5rem 2rem;
+}
+.top {
+  display: flex; justify-content: space-between;
+  align-items: center; margin-bottom: 2rem;
+  flex-wrap: wrap; gap: 2rem;
+}
+.logo {
+  font-family: var(--font-body);
+  font-size: 0.9rem; font-weight: 600;
+  letter-spacing: 0.4em; color: var(--blanco);
+}
+.sub {
+  font-size: 0.65rem; letter-spacing: 0.25em;
+  color: var(--gris); margin-top: 0.3rem;
+}
+.redes { display: flex; gap: 2rem; }
+.redes a {
+  font-size: 0.65rem; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--gris);
+  text-decoration: none; transition: color 0.3s;
+}
+.redes a:hover { color: var(--salmon); }
+.bottom {
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding-top: 1.5rem; text-align: center;
+}
+.bottom p { font-size: 0.7rem; color: rgba(255,255,255,0.2); letter-spacing: 0.1em; }

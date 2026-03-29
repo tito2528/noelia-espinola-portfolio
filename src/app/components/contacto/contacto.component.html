@@ -1,0 +1,57 @@
+<section id="contacto">
+  <div class="inner">
+    <div class="info">
+      <p class="eyebrow">Hablemos</p>
+      <h2>Contacto</h2>
+      <div class="divider"></div>
+      <p class="texto">¿Querés agendar una consulta, reservar un turno o conocer más sobre los cursos? Escribime.</p>
+      <div class="datos">
+        <div class="dato">
+          <span class="label">WhatsApp</span>
+          <span>+595 981 347 797</span>
+        </div>
+        <div class="dato">
+          <span class="label">Email</span>
+          <span>noeliaespinolaantic&#64;gmail.com</span>
+        </div>
+        <div class="dato">
+          <span class="label">Ubicación</span>
+          <span>Paraguay — Asunción & Interior</span>
+        </div>
+      </div>
+    </div>
+    <div class="formulario">
+      <div *ngIf="!enviado">
+        <div class="campo">
+          <label>Nombre</label>
+          <input type="text" [(ngModel)]="form.nombre" placeholder="Tu nombre completo" />
+        </div>
+        <div class="campo">
+          <label>Email</label>
+          <input type="email" [(ngModel)]="form.email" placeholder="tu&#64;email.com" />
+        </div>
+        <div class="campo">
+          <label>Servicio de interés</label>
+          <select [(ngModel)]="form.servicio">
+            <option value="">Seleccioná una opción</option>
+            <option>Micropigmentación de Cejas</option>
+            <option>Labios Acuarelados</option>
+            <option>Masterclass / Curso</option>
+            <option>Maquillaje Profesional</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label>Mensaje</label>
+          <textarea [(ngModel)]="form.mensaje" rows="4" placeholder="Contame en qué puedo ayudarte..."></textarea>
+        </div>
+        <button (click)="enviar()">Enviar Mensaje</button>
+      </div>
+      <div class="gracias" *ngIf="enviado">
+        <span>?</span>
+        <p>¡Gracias por escribirme!</p>
+        <small>Me pondré en contacto a la brevedad.</small>
+      </div>
+    </div>
+  </div>
+</section>

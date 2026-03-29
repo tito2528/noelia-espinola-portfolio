@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --marron: #6B5744;
+  --salmon: #E8967A;
+  --azul: #1B3A5C;
+  --oscuro: #1a1a1a;
+  --oscuro-suave: #2a2a2a;
+  --blanco: #f5f0eb;
+  --gris: #9a9a9a;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Quicksand', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--oscuro);
+  color: var(--blanco);
+  font-family: var(--font-body);
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+::selection { background: var(--salmon); color: var(--oscuro); }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--oscuro); }
+::-webkit-scrollbar-thumb { background: var(--marron); }
